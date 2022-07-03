@@ -1,127 +1,312 @@
-     /* Home Sans  */
-     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
-     /* monserratte  */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@font-face {
+    font-family: 'progress';
+    src: url(fonts/PROGRESS\ PERSONAL\ USE.ttf);
+}
+@font-face {
+    font-family: 'grooved';
+    src: url(fonts/GroovedPersonalUseRegular-9Y350.ttf);
+}
 
-
-
-body{
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-/* HEADER  */
-.header-container{
-    background-color: #36454F;
+
+/* Navbar  */
+header{
+    background-color: #3b3e43;
+}
+.link1{
+    list-style: none;
+}
+.anchor{
+    color: white;
+    text-decoration: none;
+    /* font-family: grooved; */
+}
+.nav-text{
+    font-family: grooved;
+}
+.navbar{
+    min-height: 70px;
     display: flex;
-    justify-content: center;
+    justify-content:space-between ;
     align-items: center;
-    flex-wrap: wrap;
-    height: 200px;
-   
+    padding: 0 24px;
 }
-.img1{
-    height: 200px;
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.nav-branding{
+    font-size: 2rem;
+}
+.nav-link_{
+    transition: 0.7s ease;
+}
+.nav-link:hover{
+    color: darkgray;
+
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    /* height: 3px; */
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: aliceblue;
+}
+
+
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top:70px;
+        gap:0px;
+        flex-direction: column;
+        background-color:#3b3e43;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin:16px 0;
+    }
+    .nav-menu.active{
+        left:0;
+    }
+}
+
+
+/* heading  */
+
+#heading-container{
+    height: 500px;
+    display: flex;
+    background-image: url(images/power-station-g49118fc8b_1280\ \(2\).jpg);
+
+    justify-content:space-around;
+    /* align-items:center; */
+    flex-wrap: wrap;
+}
+
+/* heading image  */
+.heading-image{
+    margin-top: 30px;
     width: 200px;
+    height: 200px;
+}
+/* heading text  */
+.heading{
+    width: 800px;
+    /* display: flex;
+    justify-content:flex-start; */
+    
 }
 .heading-text{
-    display: flex;
-    margin-right: 200px;
-    font-family: 'Open Sans', sans-serif;
-    justify-content:center;
-    align-items: center;
-    font-size: 60px;
-    flex-grow: 3;
-    color: #b3b3b3;
-}
-
-
-/* NAVBAR */
-.nav{
-    display: flex;
-    /* width: 700px; */
-    justify-content:space-around;
-    background-color: #495D6A;
-}
-.item{
-    text-decoration: none;
-    color: #b3b3b3;
-}
-.item:hover{
+    /* margin-top: 120px; */
+    /* color: #4f626e; */
     color: white;
+    /* font-family: progress; */
+    font-family: grooved; 
+    padding-top: 30px;
+    text-align:center;
+    font-size: 70px;
+    text-shadow: 4px 4px 5px black;
 }
-
-/* Introduction  */
-#introduction{
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items:center ;
-    flex-direction: column;
-    background-color: antiquewhite;
+/* introduction  */
+.introduction-text{
+    padding: 20px 0 20px 0;
+    font-size: 30px;
+    font-family: grooved;
+    text-shadow: 3px 3px 4px #8f8f8f;
+  }
+  #introduction{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background-color: #E8E8E8;
+      padding-bottom: 40px;
+      /* background-image: url(images/introduction2.png); */
+      
+  }
+  .intro-para{
+   
+      padding: 0 40px 0 40px;
+  }
+/* Facilities  */
+#facilities-heading{
+    background-color: #BBBFCA;
+    padding: 30px ;
 }
-.text1{
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
+/* index  */
+.index-elements{
+    /* text-decoration: none; */
+    color: black;
 }
-
-
-
-/* FACILITIES */
-
-#facilities{
-    /* padding: 40px 30px ; */
-    
-    background-color: #b3b3b3;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.index{
+  margin: 30px 0px 30px 100px;
 }
-    /* 1. bucket elevator  */
-.bucket-elevator{
-    width: 90%;
-    text-align: center;
+.index-header{
+ margin-left:100px;
 }
-.subHeading{
-    /* color: white; */
+.index-elements:hover{
+    color: rgb(89, 89, 89);
+}
+.text-heading{
+
+    font-family: grooved;
+   
+    text-shadow: 3px 3px 4px #737373;
     font-size: 40px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
-.img2{
-    height: 200px;
-    width: 200px;
-    padding: 20px;
+/* css for every index elements  */
+#belt-bucket-elevator{
+    background-color: #F4F4F2;
+    padding-top: 30px;
+} 
+ #Chain-Bucket-Elevator{
+    background-color: #F4F4F2;
+    padding-top: 30px;
+} 
+#Apron-Conveyor-DPC {
+    background-color: #F4F4F2;
+    padding-top: 30px;
+} 
+#Reconditioning {
+    background-color: #F4F4F2;
+    padding-top: 30px;
+} 
+#Impeller-Fan-Refurbishment{
+    background-color: #F4F4F2;
+    padding-top: 30px;
+} 
+#In-situ-Line-boring-Assignment {
+    background-color: #F4F4F2;
+    padding-top: 30px;
+} 
+#Bag-filter {
+    background-color: #F4F4F2;
+    padding-top: 30px;
+} 
+#Cages {
+    background-color: #F4F4F2;
+    padding-top: 30px;
+} 
+#Rotary-Air-Lock-Valve {
+    background-color: #F4F4F2;
+    padding-top: 30px;
+} 
+#Screw-Conveyor {
+    background-color: #F4F4F2;
+    padding-top: 30px;
+    padding-bottom:20px;
+}        
+
+
+.bucket-heading{
+    text-shadow: 3px 3px 4px #737373;
+    text-align: center;
+    font-size: 40px;
+    font-family: grooved;
+    padding-bottom: 30px;
+} 
+
+.bucket-container{
+    display: flex;
+    flex-wrap: wrap;
 }
+.bucket-para{
+    text-align: center;
   
-
-
-
+}
+.bucket-text{
+    text-align: center;
+    padding: 30px;
+    width: 40%;
+}
+.photos-videos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    padding-top: 20px;
+}
+.photo-element{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    
+}
+.video-element{
+    width: 400px;
+    height: 150px;
+}
 /* about us  */
 #about-us{
     padding:30px;
     
     text-align: center;
-    background-color: bisque;
+    background-color: #E6E6E6;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
+.about-section{
+    padding-bottom: 30px;
+}
+
 
 /* contact us  */
 #contact-us{
     padding: 20px;
     text-align: center;
-    background-color: #b3b3b3;
+    background-color: #BBBFCA;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
+.subHeading{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: grooved;
+}
+/* Set the size of the div element that contains the map */
+#map {
+    margin-top: 50px;
+    height: 250px;
+    /* The height is 400 pixels */
+    width: 600px;
+    /* The width is the width of the web page */
+  }
 
-
+/* footer  */
 .footer-container{
    background-color: #36454F;
    text-align: center;
@@ -134,16 +319,70 @@ body{
   
 }
 
-/* RESPONSIVE */
-@media (max-width: 500px) {
-    /* HEADER RESPONSIVE  */
-    .header-container{
-        height: 320px;
+
+
+/* Responsive   */
+
+@media   screen and (max-width : 476px) {
+    .heading-image{
+        margin-top: 0;
     }
     .heading-text{
-        /* flex-grow:6 ; */
-        margin-left: 220px;
+
+        /* padding-bottom: 800px; */
+        margin-bottom: 80px;
         font-size: 40px;
-        margin-bottom: 30px;
     }
+    #heading-container{
+        height: 500px;
+        background-image: url(images/power-station-g49118fc8b_1280\ \(2\).jpg);
+        align-items: flex-start;
+    }
+
+     /* Facilities heading  */
+     #facilities-heading{
+        text-align: center;
+     }
+     .index{
+        margin-left: -22px;
+        
+         text-align: center;
+     }
+   #facilities-heading ul li {
+    list-style: none;
+    margin-left: -100px;
+   }
+    .photos-videos{
+        width: 100%;
+        justify-content: center;
+    }
+    .bucket-container{
+        flex-direction: column;
+    }
+    .bucket-text{
+        padding: 0;
+        width: 100%;
+    }
+    .bucket-para{
+        /* width: 80%; */
+        padding: 0 15px 0 15px;
+        text-align: center;
+    }
+    .photo-element{
+        height: 100px;
+        width: 100px;
+    }
+    .video-element{
+        width: 200px;
+        height: 100px;
+    }
+
+    #map {
+        margin-top: 50px;
+        height: 200px;
+        /* The height is 400 pixels */
+        width: 250px;
+        /* The width is the width of the web page */
+      }
+  
 }
